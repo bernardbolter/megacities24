@@ -1,0 +1,11 @@
+{
+    "name" : "名称",
+    "email" : "电子邮件",
+    "message" : "信息",
+    "submit" : "提交",
+    "tooShort" : "太短",
+    "tooLong" : "时间太长",
+    "required" : "需要",
+    "invalidEmail" : "无效的电子邮件",
+    "contactText" : "我们欢迎你对我们的艺术项目--Megacities.world的反馈和询问。如果您对我们的艺术作品有任何疑问，或有兴趣购买印刷品，请填写下面的联系表，我们将尽快回复。"
+}

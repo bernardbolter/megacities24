@@ -1,0 +1,11 @@
+{
+    "name" : "name",
+    "email" : "email",
+    "message" : "message",
+    "submit" : "submit",
+    "tooShort" : "too short",
+    "tooLong" : "too long",
+    "required" : "required",
+    "invalidEmail" : "invalid email",
+    "contactText" : "We welcome your feedback and inquiries about our art project, Megacities.world. If you have any questions about our artwork or are interested in purchasing prints, please fill out the contact form below and we will respond as soon as possible."
+}

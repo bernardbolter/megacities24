@@ -1,0 +1,35 @@
+{
+    "deutsche-stadt" : {
+        "name" : "德国城市",
+        "berlin" : "柏林",
+        "hamburg" : "汉堡",
+        "munich" : "慕尼黑",
+        "cologne" : "科隆",
+        "frankfurt-am-main" : "法兰克福",
+        "stuttgart" : "斯图加特",
+        "dusseldorf" : "杜塞尔多夫",
+        "dortmund" : "多特蒙德",
+        "essen" : "埃森"
+    },
+    "america_city" : {
+        "name" : "美国城",
+        "new-york-city" : "纽约市",
+        "los-angeles" : "洛杉矶",
+        "chicago" : "芝加哥",
+        "houston" : "休斯顿",
+        "phoenix" : "凤凰城",
+        "philadelphia" : "费城",
+        "san-antonio" : "圣安东尼奥",
+        "san-diego" : "圣地亚哥"
+    },
+    "zhongguo-shi" : {
+        "name" : "史忠国",
+        "shanghai" : "上海",
+        "beijing" : "北京",
+        "tianjin" : "天津",
+        "guangzhou" : "广州",
+        "shenzhen" : "深圳",
+        "donguan" : "东莞",
+        "chonqing" : "崇庆"
+    }
+}

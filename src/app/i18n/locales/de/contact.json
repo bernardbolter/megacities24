@@ -1,0 +1,11 @@
+{
+    "name" : "name",
+    "email" : "email",
+    "message" : "nachricht",
+    "submit" : "einreichen",
+    "tooShort" : "zu kurz",
+    "tooLong" : "zu lang",
+    "required" : "erforderlich",
+    "invalidEmail" : "ungültige E-Mail",
+    "contactText" : "Wir freuen uns über Ihr Feedback und Ihre Anfragen zu unserem Kunstprojekt Megacities.world. Wenn Sie Fragen zu unseren Kunstwerken haben oder Drucke erwerben möchten, füllen Sie bitte das untenstehende Kontaktformular aus und wir werden Ihnen so schnell wie möglich antworten."
+}

@@ -1,0 +1,35 @@
+{
+    "deutsche-stadt" : {
+        "name" : "Deutsche Stadt",
+        "berlin" : "Berlin",
+        "hamburg" : "Hamburg",
+        "munich" : "Munich",
+        "cologne" : "Cologne",
+        "frankfurt-am-main" : "Frankfurt am Main",
+        "stuttgart" : "Stuttgart",
+        "dusseldorf" : "Dusseldorf",
+        "dortmund" : "Dortmund",
+        "essen" : "Essen"
+    },
+    "america_city" : {
+        "name" : "America City",
+        "new-york-city" : "New York City",
+        "los-angeles" : "Los Angeles",
+        "chicago" : "Chicago",
+        "houston" : "Houston",
+        "phoenix" : "Phoenix",
+        "philadelphia" : "Philadelphia",
+        "san-antonio" : "San Antonio",
+        "san-diego" : "San Diego"
+    },
+    "zhongguo-shi" : {
+        "name" : "Zhongguo Shi",
+        "shanghai" : "Shanghai",
+        "beijing" : "Beijing",
+        "tianjin" : "Tianjin",
+        "guangzhou" : "Guangzhou",
+        "shenzhen" : "Shenzhen",
+        "donguan" : "Dongguan",
+        "chonqing" : "Chonqing"
+    }
+}
