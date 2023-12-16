@@ -1,0 +1,33 @@
+@import './vars.scss';
+
+.zoom-map {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+    cursor: pointer;
+}
+
+.zoom-map-window {
+    background: rgba(255,255,255,0.5);
+    position: fixed;
+    z-index: 902;
+    mix-blend-mode: overlay;
+}
+
+.zoom-map-window-back {
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    z-index: 903;
+}
+
+.zoom-map-image {
+    z-index: 901;
+    position: absolute;
+
+    img {
+        width: 100%;
+        filter: saturate(0),
+    }
+}

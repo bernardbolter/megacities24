@@ -1,0 +1,306 @@
+@import './vars.scss';
+
+.skate-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 0 100px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 769px) {
+        flex-direction: row;
+        padding: 0 0 40px 0;
+    }
+}
+
+.skate-intro {
+    width: 80%;
+    background: rgba(255,255,255,.7);
+    margin: 30px 4% 20px;
+    padding: 12px 2% 30px;
+
+    @media screen and ( min-width: 769px) {
+        width: 300px;
+        min-height: 430px;
+        min-width: 200px;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: auto !important;
+    }
+
+    p {
+        color: rgba(0,0,0,.6);
+        font-weight: 400;
+        font-size: 12px;
+
+        @media screen and ( min-width: 500px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.skate-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+        width: 30px;
+        margin: 0 20px 0 0;
+        fill: rgba(0,0,0,.3);
+    }
+
+    h1 {
+        color: rgba(0,0,0,.6);
+        font-size: 24px;
+        font-weight: 800;
+
+        @media screen and ( min-width: 500px) {
+            font-size: 26px;
+        }
+    }
+}
+
+.skate-quote {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 11px;
+    margin: 30px 0 0 10px;
+
+    @media screen and ( min-width: 500px) {
+        font-size: 12px;
+    }
+
+    @media screen and ( min-width: 769px) {
+        font-size: 14px;
+    }
+}
+
+.skate-image {
+    display: block;
+    margin: 2% 10px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+
+    @media screen and ( min-width: 769px) {
+        margin: 0 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.skate-loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 100px;
+        opacity: .4;
+    }
+
+    p {
+        color: white;
+        opacity: .5;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+.skate-infoContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media only screen and (min-width: 769px) {
+        width: 270px;
+    }
+    @media only screen and (min-width: 1000px) {
+        width: 370px;
+    }  
+}
+
+.skate-info {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 25px;
+
+    @media only screen and (min-width: $medium) {
+        padding: 5px 10px 0 10px;
+    } 
+}
+
+.skate-infoHeader {
+    width: 100%;
+    margin: 0 0 7px;
+
+    h1 {
+        margin: 0 0 0 7px;
+        padding: 0;
+        color: $light;
+        font-size: 12px;
+        font-weight: 900;
+        opacity: 0.8;
+        display: inline-block;
+
+        @media only screen and (min-width: $medium) {
+            font-size: 14px;
+        } 
+    }
+}
+
+.skate-flag {
+    width: 30px;
+    opacity: 0.6;
+
+    img {
+        width: 30px;
+    }
+}
+
+.skate-spots {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    p {
+        font-size: 7px;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: white;
+        opacity: .8;
+        width: 125px;
+    }
+    @media only screen and (min-width: $medium) {
+        width: auto;
+    }
+}
+
+.skate-line {
+    width: 50%;
+    margin: 7px 50% 7px 0;
+    height: 1px;
+    background: white;
+    opacity: .5; 
+}
+
+.skate-allSpots {
+    font-size: 9px;
+    color: white;
+    opacity: .8;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: inline-block;
+
+    @media only screen and (min-width: $medium) {
+        display: block;
+        font-size: 10px;
+    }
+}
+
+.skate-allCities {
+    font-size: 8px;
+    color: white;
+    opacity: .6;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: inline-block;
+
+    @media only screen and (min-width: $medium) {
+        display: block;
+        font-size: 9px;
+    }
+}
+
+.skate-allStates {
+    font-size: 7px;
+    color: white;
+    opacity: .4;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 10px 0 0;
+    display: inline-block;
+
+    @media only screen and (min-width: $medium) {
+        display: block;
+        font-size: 8px;
+    }
+}
+
+.skate-artInfo {
+    margin: 30px 0 0 10px;
+    padding: 0;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+
+}
+
+.skate-artText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.skate-artSize {
+    font-size: 9px;
+    font-weight: 500;
+    opacity: .4;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 0 0 5px;
+    display: inline-block;
+
+    @media only screen and (min-width: $medium) {
+        font-size: 11px;
+        display: block;
+    }  
+}
+
+.skate-artLine {
+    width: 50px;
+    height: 1px;
+    background: rgba(255,255,255,0.3);
+    margin: 4px 7px;
+    padding: 0;
+    display: inline-block;
+
+    @media only screen and (min-width: $medium) {
+        margin: 7px 0;
+        display: block;
+    }  
+}
+
+.skate-artYear {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: .8;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 5px 0 0 0;
+
+    @media only screen and (min-width: $medium) {
+        font-size: 12px;
+        margin: 20px 0 0 0;
+    }  
+}

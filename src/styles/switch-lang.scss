@@ -1,0 +1,77 @@
+@import 'vars.scss';
+
+.switch-lang-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    z-index: 1100;
+    top: 50px;
+    left: 10px;
+    cursor: pointer;
+
+    @media screen and (max-width: 600px) {
+        top: 90px;
+        position: absolute;
+    }
+}
+
+.switch-menu {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 600px) {
+        top: 50px;
+    }
+}
+
+.switch-menu-item {
+    padding: 0;
+    margin: 5px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 29px;
+    height: 27px;
+    background: rgba(255,255,255,.2);
+    border-radius: 5px;
+
+    @media screen and (max-width: 600px) {
+        width: 39px;
+        height: 37px;
+    }
+
+    img {
+        width: 23px;
+
+        @media screen and (max-width: 600px) {
+            width: 30px;
+        }
+    }
+}
+
+.switch-lang-icon {
+    width: 30px;
+    height: 30px;
+    opacity: .6;
+    transition: opacity .5s ease;
+
+    @media screen and (max-width: 600px) {
+        width: 40px;
+        height: 40px;
+    }
+
+    &:hover {
+        opacity: .8;
+        transition: opacity .5s ease;
+    }
+
+    svg {
+        width: 100%;
+        fill: $light;
+    }
+}

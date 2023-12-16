@@ -1,0 +1,55 @@
+@import './vars.scss';
+
+.mega-video-container {
+    width: 100%;
+
+    .mega-video-bottom {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.05);
+    }
+
+    h1 {
+        color: white;
+        font-size: 13px;
+        margin: 0 0 0 14px;
+        padding: 0;
+        line-height: 1.1;
+    }
+
+    h2 {
+        color: white;
+        font-size: 11px;
+        line-height: 11px;
+        font-weight: 400;
+        opacity: .6;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .mega-video-close {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: .5;
+        transition: opacity .5s ease;
+        cursor: pointer;
+        margin: 0 7px 0 0;
+
+        p {
+            color: white;
+            font-size: 8px;
+            padding: 0;
+            margin: 2px 0 2px 0;
+        }
+
+        svg {
+            width: 20px;
+            margin: 4px 0 0 0;
+        }
+    }
+}

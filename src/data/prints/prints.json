@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1, 
+        "name": "Deutsche Stadt",
+        "a1" : "a1-deutsche-stadt",
+        "flag" : "de.png",
+        "country" : "germany"
+    },
+    {
+        "id": 2, 
+        "name": "America City",
+        "a1" : "a1-america-city",
+        "flag" : "us.png",
+        "country" : "USA"
+    },
+    {
+        "id": 3, 
+        "name": "Skate City",
+        "a1" : "a1-skate-city",
+        "flag" : "sk-us.png",
+        "country" : "USA Skateboarding"
+    },
+    {
+        "id" : 4,
+        "name" : "місто Україна",
+        "a1" : "a1-misto-ukrayina",
+        "flag" : "ua.png",
+        "country" : "Ukraine"
+    }
+]

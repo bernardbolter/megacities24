@@ -1,0 +1,78 @@
+@import './vars.scss';
+
+.nav-mobile-container {
+    width: 100%;
+    height: 80px;
+    background: $medBack;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 401;
+}
+
+.nav-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    margin: 0;
+
+    .nav-link {
+        border-right: 2px solid $photobox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22.5%;
+        height: 30px;
+        font-size: 18px;
+        color: $light;
+        font-weight: 400;
+        text-decoration: none;
+        opacity: .7;
+        padding: 0;
+        margin: 0;
+        background: $medBack;
+        transition: all 0.5s ease-in-out;
+    
+        &:hover {
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+          background: $photoboxRGBA;
+        }
+    }
+
+    .nav-link-on {
+        background: $photobox;
+        position: relative;
+        top: 6px;
+        height: 42px;
+        opacity: 1;
+        transition: none;
+
+        &:hover {
+            opacity: 1;
+            transition: none;
+        }
+    }
+
+    .globe {
+        width: 10%;
+        height: 30px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $light;
+        }
+    }
+}

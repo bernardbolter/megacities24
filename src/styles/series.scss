@@ -1,0 +1,19 @@
+@import './vars.scss';
+
+.series-container {
+    width: 100%;
+    background: $photobox;
+    z-index: 0;
+}
+
+.series-megacities {
+    width: 100%;
+    margin: 135px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 600px) {
+        margin: 90px 0 0 0;
+    }
+}

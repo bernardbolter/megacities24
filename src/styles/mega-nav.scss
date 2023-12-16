@@ -1,0 +1,276 @@
+@import './vars.scss';
+
+.mega-nav {
+    z-index: 300;
+    display: block;
+}
+
+.mega-nav-header {
+  cursor: pointer;
+}
+
+.mega-nav-background {
+    z-index: 302;
+    position: fixed;
+    left: -15px;
+    z-index: 100;
+    background: rgba(255,255,255,0.15);
+    height: 74px;
+    transform: rotate(-16deg);
+    transition: $regular;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mega-nav-background-open {
+    transform: rotate(0deg);
+    transition: $regular;
+    left: 0;
+    top: -30px;
+}
+
+.mega-nav-header-dark-background {
+    z-index: 301;
+    position: fixed;
+    left: -15px;
+    z-index: 100;
+    background: $photobox;
+    opacity: .7;
+    height: 74px;
+    transform: rotate(-16deg);
+    transition: $regular;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.mega-nav-header-dark-background-open {
+  transform: rotate(0deg);
+  transition: $regular;
+  left: 0;
+  top: -30px;
+}
+
+.mega-nav-flag {
+    position: fixed;
+    z-index: 101;
+    top: 12px;
+    width: 24px;
+    transform: rotate(-19deg);
+    transition: $regular;
+
+    img {
+        width: 100%;
+    }
+}
+
+.mega-nav-flag-open {
+    transform: rotate(0deg);
+    transition: $regular;
+    top: 12px;
+    left: 231px;
+}
+
+.mega-nav-name {
+    position: fixed;
+    z-index: 101;
+    top: -20px;
+    left: -10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: $light;
+    transform: rotate(-16deg);
+    transition: $regular;
+    opacity: 0;
+
+    span {
+      font-weight: 800;
+      font-size: 12px;
+    }
+}
+
+.mega-nav-name-open {
+    transform: rotate(0deg);
+    transition: $regular;
+    top: 12px;
+    left: 40px;
+    opacity: 0.9;
+
+    span {
+      opacity: .6;
+      transition: $regular;
+    }
+}
+
+.mega-nav-cancel {
+  width: 15px;
+  height: 15px;
+
+  svg {
+    width: 100%;
+  }
+}
+
+///////////////////////////////////////////////////////
+// MEGA BODY
+///////////////////////////////////////////////////////
+
+.mega-nav-body {
+  z-index: 302;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 45px;
+  transition: $regular;
+
+  &:hover {
+    transition: $regular;
+  }
+}
+
+.mega-nav-body-dark {
+  z-index: 301;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  transition: $regular;
+  background: $photoboxRGBA;
+
+  &:hover {
+    transition: $regular;
+  }
+}
+
+///////////////////////////////////////////////////////
+// MEGA SEARCH
+///////////////////////////////////////////////////////
+
+.mega-nav-search {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  .mega-nav-searchbar {
+    width: 100%;
+    background: rgba(255,255,255,0.20);
+    border: none;
+    outline: none;
+    padding: 8px 14px;
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  .mega-nav-search-params {
+    width: 44px;
+    height: 31px;
+    background: rgba(255,255,255,0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(0,0,0,.5);
+    }
+
+    svg {
+      width: 21px;
+      cursor: pointer;
+      opacity: .4;
+      transition: opacity .5s ease;
+
+      &:hover {
+        opacity: .7;
+        transition: opacity .5s ease;
+      }
+    }
+  }
+}
+
+.no-search-container {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $photoboxRGBA;
+
+  p {
+    color: white;
+    opacity: 0.7;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+///////////////////////////////////////////////////////
+// MEGA NAV LINKS
+/////////////////////////////////////////////////////// 
+
+  .mega-nav-links {
+      display: none;
+      top: 100px;
+      left: 0;
+  }
+
+  .mega-nav-links-open {
+      display: block;
+  }
+
+  .mega-link-container {
+    -webkit-tap-highlight-color: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+///////////////////////////////////////////////////////
+// MEGA NAV BOTTOM
+/////////////////////////////////////////////////////// 
+
+  .mega-nav-bottom {
+    width: 90%;
+    padding: 0 5%;
+    background: rgba(255,255,255,.05);
+    border-top: 1px solid rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mega-nav-bottom-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  p {
+    font-size: 10px;
+    color: white;
+    font-weight: 400;
+    padding: 7px 5px;
+    margin: 0;
+    opacity: .3;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: white;
+    opacity: .2;
+    padding: 0 5px;
+  }
+}

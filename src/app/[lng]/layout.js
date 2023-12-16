@@ -2,6 +2,11 @@ import { Noto_Sans } from 'next/font/google'
 import { dir } from 'i18next'
 import { languages } from '@/app/i18n/settings'
 
+import MegaProvider from '@/providers/megaProvider'
+import StoreProvider from '@/providers/storeProvider'
+
+import '@/styles/styles.scss'
+
 export async function generateStatisParams() {
   return languages.map(lng => ({ lng }))
 }
@@ -22,7 +27,11 @@ export default function RootLayout({
   return (
     <html lang={lng} dir={dir(lng)}>
       <body className={noto.className}>
-        {children}
+        <MegaProvider>
+          <StoreProvider>
+            {children}
+          </StoreProvider>
+        </MegaProvider>
       </body>
     </html>
   )

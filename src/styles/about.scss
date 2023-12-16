@@ -1,0 +1,116 @@
+@import './vars.scss';
+
+.about-container {
+    width: 100%;
+    background: $photobox;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.about-overview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-headline {
+    font-weight: 900;
+    font-size: 28px;
+    color: $light;
+    margin: 0 0 0 75px;
+    padding: 0;
+}
+
+.about-content {
+    width: 100%;
+    margin: 90px 0 50px;
+}
+
+.about-overview-effect {
+    margin: 5px 0 0 95px;
+    padding: 0;
+    color: $light;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.about-overview-text {
+    margin: 10px 5%;
+    padding: 2%;
+    color: $light;
+    font-size: 14px;
+    line-height: 20px;
+    background: $photoboxRGBA;
+    font-weight: 400;
+    opacity: .7;
+}
+
+.about-wiki-link {
+    width: 95%;
+    text-align: right;
+    color: $light;
+    font-size: 10px;
+    opacity: .6;
+    margin: 0 5% 20px auto;
+    transition: opacity .5s ease-in-out;
+
+    &:hover {
+        opacity: .8;
+        transition: opacity .5s ease-in-out;
+    }
+}
+
+.about-overview-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-globe {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+}
+
+.about-sky {
+    width: 100%;
+    height: 300px;
+}
+
+.about-images {
+    margin: 0 0 3% 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media only screen and (min-width: $medium) {
+        margin: 0 0 5% 7.5%;
+        max-width: 1200px;
+    }
+}
+
+.about-image {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+    margin: 2% 0;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (min-width: $medium) {
+        width: 48%;
+        padding-bottom: 48%;
+        margin: 1%;
+    } 
+}

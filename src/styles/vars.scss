@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+    background: #242526;
+    font-family: "Noto Sans", sans-serif;
+}
+
+// colors
+$photobox: #242526;
+$photoboxRGBA: rgba(36, 37, 38, 0.7);
+$medBack: #48494A;
+$light: #ededed;
+$lightHex: rgba(237, 237, 237, 0.5);
+
+// spacing
+$gutter: 7px;
+
+//breakpoints
+$medium: 650px;
+$large: 1000px;
+$mobile-break: 481px;
+$tablet-break: 769px;
+$desktop-break: 1025px;
+$jumbo-break: 1201px;
+
+//transitions
+
+$fast: all 0.5s ease;
+$regular: all 0.75s ease;
+$slow: all 1s ease;
