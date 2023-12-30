@@ -36,6 +36,7 @@ const CountryNav = () => {
                     }}
                 >
                     {mega.shuffledMegacities.map((city, index) => {
+                        console.log(city.flag)
                         return (
                             <motion.div
                                 key={index} 

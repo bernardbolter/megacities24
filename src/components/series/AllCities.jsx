@@ -9,7 +9,7 @@ import City from './City'
 import SkateCity from './SkateCity'
 import Loader from '../common/Loader'
 
-const AllCities = () => {
+const AllCities = ({ lng }) => {
     const [mega, setMega] = useContext(MegaContext)
     const size = useWindowSize()
 
@@ -30,6 +30,7 @@ const AllCities = () => {
                                         cityWidth={mega.cityWidth} 
                                         cityHeight={mega.cityHeight}
                                         even={i % 2 == 0}
+                                        lng={lng}
                                     />
                         } else {
                             return <City 
@@ -38,6 +39,7 @@ const AllCities = () => {
                                         cityWidth={mega.cityWidth}
                                         cityHeight={mega.cityHeight}
                                         even={i % 2 == 0}
+                                        lng={lng}
                                     />
                         }
                     })}

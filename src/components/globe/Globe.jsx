@@ -2,12 +2,13 @@ import { useState, useEffect, useRef, useContext, useMemo } from 'react'
 import Globe from 'react-globe.gl'
 import { useRouter } from 'next/navigation'
 import { useWindowSize } from '@/helpers/useWindowSize'
+import { useTranslation } from '@/app/i18n/client'
 
 import WorldGeo from '../../data/world/allWorld.json'
 import SkateGeo from '../../data/world/skateWorld.json'
 import { MegaContext } from '@/providers/megaProvider'
 
-const MegaGlobe = ({ lng, population, skateSpots }) => {
+const MegaGlobe = ({ lng }) => {
     const globeEl = useRef()
     const [mega, setMega] = useContext(MegaContext)
     const [hoverD, setHoverD] = useState('noHover')
@@ -16,6 +17,7 @@ const MegaGlobe = ({ lng, population, skateSpots }) => {
     const [skateMegas, setSkateMegas] = useState([])
     const size = useWindowSize()
     const { push } = useRouter()
+    const { t } = useTranslation(lng, 'common')
 
     const nightSky = "https://digitalcityseries.com/art/megacities/web/night-sky.png"
     const megaGlobe = "https://digitalcityseries.com/art/megacities/web/mega-globe.jpg"
@@ -106,7 +108,7 @@ const MegaGlobe = ({ lng, population, skateSpots }) => {
                     return (`
                     <div class="globe-label">
                         <h5>${name}</h5>
-                        <p>${skateSpots}:</p>
+                        <p>${t('skateSpots')}:</p>
                         <h4>${spots.length}</h4>
                     </div>
                     `)
@@ -114,7 +116,7 @@ const MegaGlobe = ({ lng, population, skateSpots }) => {
                     return (`
                         <div class="globe-label">
                             <h5>${name}</h5>
-                            <p>${population}</p>
+                            <p>${t('population')}</p>
                             <h4>${makePop(cities)}</h4>
                         </div>
                     `)

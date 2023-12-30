@@ -33,6 +33,7 @@ export const curvedText = (text, radius) => {
 };
 
 export const returnFlag = name => {
+  console.log(name)
   if (name === "en") {
     return "flags/gb.png";
   } else if (name === "us") {

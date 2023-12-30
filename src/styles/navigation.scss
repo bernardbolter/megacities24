@@ -8,55 +8,102 @@
   width: 130px;
   height: 440px;
   background: $photoboxRGBA;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   transform: rotate(-18deg);
   padding: 0;
   transition: all .5s ease;
+
+  @media screen and (min-width: $tablet-break) {
+    display: flex;
+  }
 }
 
 .nav-background-dark-off {
   top: 0;
-  transform: rotate(-45deg) translate(120px, -30px);
+  transform: rotate(-45deg) translate(145px, -30px);
   transition: all .5s ease;
 }
   
 .navigation {
-  z-index: 201;
-  position: fixed;
-  top: -97px;
-  right: -74px;
-  width: 140px;
-  border-left: 1px solid $lightHex;
-  background: rgba(255,255,255,0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transform: rotate(-18deg);
-  padding: 95px 0 200px 0;
-  transition: all .5s ease;
-  opacity: 1;
+  width: 100%;
+    height: 80px;
+    background: $medBack;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    z-index: 401;
+
+  @media screen and (min-width: $tablet-break) {
+    z-index: 201;
+    position: fixed;
+    top: -90px;
+    right: -75px;
+    left: auto;
+    width: 140px;
+    border-left: 1px solid $lightHex;
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transform: rotate(-18deg);
+    padding: 95px 0 330px 0;
+    transition: all .5s ease;
+    opacity: 1;
+    align-items: flex-start;
+  }
   
-  a {
+  .nav-link {
+    border-right: 2px solid $photobox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22.5%;
+    height: 30px;
+    font-size: 18px;
     color: $light;
     font-weight: 400;
-    font-size: 13px;
     text-decoration: none;
     opacity: .7;
-    padding: 4px 0 4px 14px;
+    padding: 0;
+    margin: 0;
+    background: $medBack;
+    transition: all 0.5s ease-in-out;
 
     &:hover {
-      text-decoration: underline;
       opacity: 1;
+      transition: all 0.5s ease-in-out;
+      background: $photoboxRGBA;
     }
 
-    svg {
-      fill: $light;
+    @media screen and (min-width: $tablet-break) {
+      color: $light;
+      font-weight: 400;
+      font-size: 13px;
+      text-decoration: none;
+      background: transparent;
       opacity: .7;
-      width: 35px;
-      height: 35px;
-      padding: 0 0 0 14px;
+      padding: 4px 0 4px 14px;
+      width: auto;
+      border-right: none;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 1;
+      }
+  
+      svg {
+        fill: $light;
+        opacity: .7;
+        width: 35px;
+        height: 35px;
+        padding: 0 0 0 14px;
+      }
     }
   }
 
@@ -65,8 +112,30 @@
     transition: opacity .3s ease;
   }
 
+  .nav-link-on {
+    background: $photobox;
+    position: relative;
+    top: 6px;
+    height: 42px;
+    opacity: .85;
+    transition: all .3s ease;
+
+      &:hover {
+        opacity: 1;
+        transition: all .3s ease;
+      } 
+  }
+
+  .nav-link-off {
+    @media screen and (min-width: $tablet-break) {
+      opacity: 0;
+      transition: all .3s ease;
+    }
+  }
+
   .globe {
     padding: 10px 0 0 10px;
+    fill: $light;
 
     svg {
       width: 40px;
@@ -76,21 +145,25 @@
 }
 
 .navigation-off {
-  opacity: 0;
   transition: all .5s ease;
-  z-index: -2;
+  transform: rotate(-45deg) translate(90px, 0px);
 }
 
 .nav-cancel {
+  display: none;
   position: fixed;
   z-index: 1001;
-  top: 10px;
+  top: 13px;
   right: 10px;
   width: 25px;
   height: 25px;
   opacity: .5;
   transition: opacity .5s ease;
   cursor: pointer;
+
+  @media screen and (min-width: $tablet-break) {
+    display: block;
+  }
 
   &:hover {
     opacity: .7;

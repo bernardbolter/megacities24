@@ -5,18 +5,24 @@ import { useWindowSize } from '@/helpers/useWindowSize'
 import { getPopulation } from '@/helpers'
 import * as Scroll from 'react-scroll'
 
+import { useTranslation } from '@/app/i18n/client'
+
 import { MegaContext } from '@/providers/megaProvider'
 
 const City = ({
     megacity,
     cityWidth,
     cityHeight,
-    even
+    even,
+    lng
 }) => {
     const [mega] = useContext(MegaContext)
     const [population, setPopulation] = useState('')
+    const [overlayCity, setOverlayCity] = useState('')
     const size = useWindowSize()
     const router = useRouter()
+    const { t } = useTranslation(lng, ['common','about', 'cities'])
+    console.log("city: ", t('deutsche-stadt.munich', {ns: 'cities'}))
 
     useEffect(() => {
         setPopulation(getPopulation(megacity.cities))
@@ -84,7 +90,7 @@ const City = ({
                     {megacity.cities.map(city => {
                         return (
                             <div className="city-cities" key={city.name}>
-                                <div>
+                                <div className="city-title" onClick={() => setOverlayCity(city.slug)}>
                                     <h3>{city.name}</h3>
                                     {city.name !== city.englishName ? <h5>{city.englishName}</h5> : null}
                                 </div>

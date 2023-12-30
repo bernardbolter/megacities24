@@ -30,7 +30,7 @@ const SkateCity = ({
         setUniqueStates(new Set(allStates).size)
     }, [skateCity.spots])
 
-    console.log(skateCity)
+    // console.log(skateCity)
 
     return (
         <div 

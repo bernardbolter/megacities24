@@ -14,16 +14,8 @@ export default async function About({ params: { lng} }) {
   return (
     <section className="about-container">
         <SwitchLang  lng={lng} />
-        <Logo 
-            title={t('megacities')}
-            tagline={t('compositeCountryPortaits')}
-        />
-        <Nav 
-            about={t('about')}
-            series={t('series')}
-            prints={t('prints')}
-            contact={t('contact')}
-        /> 
+        <Logo lng={lng} />
+        <Nav lng={lng} /> 
 
       <div className="about-content">
           <h1 className="about-headline">{t('headline', { ns: 'about' })}</h1>

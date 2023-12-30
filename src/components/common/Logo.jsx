@@ -1,10 +1,14 @@
+"use client"
+
 import Link from 'next/link'
+import { useTranslation } from '@/app/i18n/client'
 
 import Insta from '@/svg/Insta'
 import TikTok from '@/svg/TikTok'
 import Snap from '@/svg/Snap'
 
-const Logo = ({ title, tagline }) => {
+const Logo = ({ lng }) => {
+    const { t } = useTranslation(lng, 'common')
 
     return (
         <section className="logo">
@@ -12,8 +16,8 @@ const Logo = ({ title, tagline }) => {
                 href="/"
                 className="logo-title"
             >
-                <h1>{title}</h1>
-                <h2>{tagline}</h2>
+                <h1>{t('megacities')}</h1>
+                <h2>{t('compositeCountryPortaits')}</h2>
             </Link>
             <div className="socials">
                 <a href="https://instagram.com">

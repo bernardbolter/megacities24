@@ -2432,7 +2432,7 @@
     {  "name" : "Skate City",
           "slug" : "skate-city",
           "country" : "Skatica",
-          "flag" : "thrasher.png",
+          "flag" : "sk8us.png",
           "year" : "2020",
           "type" : "skateboarding",
           "completed" : true,

@@ -1,16 +1,18 @@
 "use client"
 
 import { useState } from 'react'
-// import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
+import { useTranslation } from '@/app/i18n/client'
 
 import Link from 'next/link'
 
 import Globe from '@/svg/Globe'
 import Cancel from '@/svg/Cancel'
 
-const Nav = ({ about, series, prints, contact }) => {
+const Nav = ({ lng }) => {
     const [navOpen, setNavOpen] = useState(true)
-    // const router = useRouter()
+    const pathname = usePathname().substring(3)
+    const { t } = useTranslation(lng, 'common')
 
     return (
         <div className="navigation-container">
@@ -18,18 +20,57 @@ const Nav = ({ about, series, prints, contact }) => {
                 <Cancel navOpen={navOpen} />
             </div>
             <section className={navOpen ? "navigation" : "navigation navigation-off"} >
-                <Link className="nav-link" href="/about">{about}</Link>
-                <Link className="nav-link" href="/series">{series}</Link>
-                <Link className="nav-link" href="/prints-list">{prints}</Link>
-                <Link className="nav-link" href="/contact">{contact}</Link>
-                <Link className="link globe" href="/">
+                <Link 
+                    className={pathname === '/series' 
+                        ? 'nav-link nav-link-on' 
+                        : !navOpen 
+                        ? 'nav-link nav-link-off'
+                        : 'nav-link'} 
+                        href="/series"
+                >
+                    {t('series')}
+                </Link>
+                <Link 
+                    className={pathname === '/prints' 
+                    ? 'nav-link nav-link-on' 
+                    : !navOpen 
+                    ? 'nav-link nav-link-off'
+                    : 'nav-link'} 
+                    href="/prints-list"
+                >
+                    {t('prints')}
+                </Link>
+                <Link 
+                    className={pathname === '/about' 
+                    ? 'nav-link nav-link-on' 
+                    : !navOpen 
+                    ? 'nav-link nav-link-off'
+                    : 'nav-link'} 
+                    href="/about"
+                >
+                    {t('about')}
+                </Link>
+                <Link 
+                    className={pathname === '/contact' 
+                    ? 'nav-link nav-link-on' 
+                    : !navOpen 
+                    ? 'nav-link nav-link-off'
+                    : 'nav-link'} 
+                    href="/contact"
+                >
+                    {t('contact')}
+                </Link>
+                <Link 
+                    className={pathname === '/' 
+                    ? 'link globe nav-link-on' 
+                    : !navOpen 
+                    ? 'link globe nav-link-off'
+                    : 'link globe'}
+                    href="/">
                     <Globe />
                 </Link>
             </section>
-            <div 
-                className={navOpen ? "nav-background-dark" : "nav-background-dark nav-background-dark-off"} 
-                // style={{ top: router.pathname === '/[slug]' ? -45 : 0}}    
-            />
+            <div className={navOpen ? "nav-background-dark" : "nav-background-dark nav-background-dark-off"} />
         </div>
     )
 }

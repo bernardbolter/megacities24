@@ -13,28 +13,15 @@ export default async function World({ params: { lng }}) {
 
   return (
     <main className="index-container">
-      <Logo
-        title={t('megacities')}
-        tagline={t('compositeCountryPortaits')}
-      />
-      <Nav 
-          about={t('about')}
-          series={t('series')}
-          prints={t('prints')}
-          contact={t('contact')}
-      />
+      <Logo lng={lng} />
+      <Nav lng={lng} />
       <div className="index-world-ready">
-        <Image src={globeGif} alt="spinning globe loader" />
-        <h2>Loading World...</h2>
+        <Image src={globeGif} alt={t('spinningGlobeLoader')} />
+        <h2>{t('loadingWorld')}...</h2>
       </div>
       <SwitchLang lng={lng} />
-      <WrappedGlobe lng={lng} skateSpots={t('skateSpots')} population={t('population')}/>
-      <WorldReady
-        weAreTheWorld={t('weAreTheWorld')}
-        weSkateTheWorld={t('weSkateTheWorld')}
-        skateWorld={t('skateWorld')}
-        megacities={t('megacities')}
-      />
+      <WrappedGlobe lng={lng} />
+      <WorldReady lng={lng} />
     </main>
   )
 }

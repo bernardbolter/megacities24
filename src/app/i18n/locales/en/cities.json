@@ -11,7 +11,7 @@
         "dortmund" : "Dortmund",
         "essen" : "Essen"
     },
-    "america_city" : {
+    "america-city" : {
         "name" : "America City",
         "new-york-city" : "New York City",
         "los-angeles" : "Los Angeles",
