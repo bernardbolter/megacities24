@@ -1,7 +1,7 @@
 @import './vars.scss';
 
 .country-container {
-    position: absolute;
+    position: fixed;
     left: auto;
     right: 10px;
     top: 96px;
@@ -9,7 +9,7 @@
 
     @media only screen and (min-width: 600px) {
         right: auto;
-        left: 360px;
+        left: 387px;
         top: 8px;
     } 
 }

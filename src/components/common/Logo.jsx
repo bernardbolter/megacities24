@@ -26,9 +26,9 @@ const Logo = ({ lng }) => {
                 <a href="http://tiktok.com">
                     <TikTok />
                 </a>
-                <a href="https://snapchat.com">
+                {/* <a href="https://snapchat.com">
                     <Snap />
-                </a>
+                </a> */}
             </div>
         </section>
     )

@@ -2,12 +2,12 @@
 
 .logo {
     z-index: 2001;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    left: 0;
+    left: 14px;
     top: 0;
     width: auto;
 

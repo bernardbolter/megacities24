@@ -29,7 +29,10 @@
         "tianjin" : "天津",
         "guangzhou" : "广州",
         "shenzhen" : "深圳",
-        "donguan" : "东莞",
-        "chonqing" : "崇庆"
+        "dongguan" : "东莞",
+        "chongqing" : "崇庆"
+    },
+    "skate-city" : {
+        "name" : "滑板城"
     }
 }

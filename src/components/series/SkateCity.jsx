@@ -35,8 +35,8 @@ const SkateCity = ({
     return (
         <div 
             className="skate-container"
-            style={{ width: size.width < 769 ? cityWidth : 'auto',
-                    flexDirection: size.width < 768 ? 'column' : even ? 'row' : 'row-reverse'
+            style={{ width: 'auto',
+                    flexDirection: size.width < 768 ? 'column' : 'row'
             }}
         >
             <Scroll.Element name={skateCity.slug} />
@@ -79,6 +79,7 @@ const SkateCity = ({
 
             <div 
                 className="skate-infoContainer"
+                style={{ marginRight: size.width - (cityWidth + 400) }}
             >
                 <div className="skate-info">
                     <div className="skate-infoHeader">

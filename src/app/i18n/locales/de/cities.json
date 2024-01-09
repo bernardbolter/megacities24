@@ -12,7 +12,7 @@
         "essen" : "Essen"
     },
     "america-city" : {
-        "name" : "America City",
+        "name" : "Amerika Stadt",
         "new-york-city" : "New York City",
         "los-angeles" : "Los Angeles",
         "chicago" : "Chicago",
@@ -29,7 +29,10 @@
         "tianjin" : "Tianjin",
         "guangzhou" : "Guangzhou",
         "shenzhen" : "Shenzhen",
-        "donguan" : "Dongguan",
-        "chonqing" : "Chonqing"
+        "dongguan" : "Dongguan",
+        "chongqing" : "Chonqing"
+    },
+    "skate-city" : {
+        "name" : "Skate Stadt"
     }
 }

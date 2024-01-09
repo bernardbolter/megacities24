@@ -3,17 +3,217 @@
 .series-container {
     width: 100%;
     background: $photobox;
+    position: relative;
     z-index: 0;
 }
 
 .series-megacities {
     width: 100%;
-    margin: 135px 0 0 0;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
-    @media screen and (min-width: 600px) {
-        margin: 90px 0 0 0;
+    @media only screen and (min-width: 769px) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 55px 0 0 20px;
+    }
+}
+
+.series-bottom {
+    position: fixed;
+    bottom: 10px;
+    height: 17px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+.series-bottomLeft {
+    width: 50%;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.series-bottomLeftDisabled {
+    width: 50%;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed !important;
+    outline: none;
+}
+
+.series-arrowsLeft {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 -4px;
+    position: fixed;
+    left: 25px;
+    bottom: 12px;
+
+    svg {
+        width: 7px;
+        height: 13px;
+        fill: white;
+        opacity: .3;
+        transform: rotate(180deg)
+    }
+}
+
+.series-lineLeft {
+    width: calc(100% - 26px);
+    margin-left: 26px;
+    height: 2px;
+    background: white;
+    opacity: .3;
+}
+
+.series-bottomRight {
+    width: calc(50% - 12px);
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+}
+
+.series-bottomRightDisabled {
+    width: calc(50% - 12px);
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: not-allowed !important;
+    outline: none;
+}
+
+.series-arrowsRight {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 -4px;
+    position: fixed;
+    right: 9px;
+    bottom: 12px;
+
+    svg {
+        width: 7px;
+        height: 13px;
+        fill: white;
+        opacity: .3;
+    }
+}
+
+.series-lineRight {
+    width: calc(100% - 26px);
+    margin-right: 26px;
+    height: 2px;
+    background: white;
+    opacity: .3;
+}
+
+.series-scrollRight {
+    position: fixed;
+    bottom: 4px;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: white;
+    opacity: .4;
+    padding: 0;
+    margin: 0;
+}
+
+.horoscroll-container {
+    position: fixed;
+    z-index: 2001;
+    right: 20px;
+    bottom: 20vh;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,.3);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        width: 70%;
+        fill: $light;
+        stroke: $light;
+        opacity: .7;
+    }
+}
+
+.megaseries-scrollleft-container {
+    width: 15%;
+    height: 100vh;
+    background: rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    opacity: .7;
+    transition: opacity .5s ease;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity .5s ease;
+    }
+
+    svg {
+        width: 30%;
+        transform: rotate(180deg);
+        fill: $light;
+        opacity: .5;
+    }
+}
+
+.megaseries-scrollright-container {
+    width: 15%;
+    height: 100vh;
+    background: rgba(0,0,0,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 101;
+    right: 0;
+    top: 0;
+    opacity: .7;
+    transition: opacity .5s ease;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+        transition: opacity .5s ease;
+    }
+
+    svg {
+        width: 30%;
+        fill: $light;
+        opacity: .5;
     }
 }

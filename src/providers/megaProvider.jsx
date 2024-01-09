@@ -19,6 +19,7 @@ const MegaProvider = ({ children }) => {
     worldReady: true,
     cityWidth: 0,
     cityHeight: 0,
+    megaIndex: 0,
 
     zoom: 'normal',
     zooming: false,

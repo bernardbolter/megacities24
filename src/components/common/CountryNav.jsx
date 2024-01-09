@@ -4,11 +4,12 @@ import React, { useState, useContext } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MegaContext } from '@/providers/megaProvider'
 import Image from 'next/image'
-import * as Scroll from 'react-scroll'
+import { useTranslation } from '@/app/i18n/client'
 
-const CountryNav = () => {
-    const [mega] = useContext(MegaContext)
+const CountryNav = ({ lng }) => {
+    const [mega, setMega] = useContext(MegaContext)
     const [showCountryNav, setShowCountryNav] = useState(false)
+    const { t } = useTranslation(lng, ['common', 'cities'])
 
     return (
         <div className="country-container">
@@ -16,7 +17,7 @@ const CountryNav = () => {
                 className="country-header"
                 onClick={() => setShowCountryNav(!showCountryNav)}
             >
-                <h3>Select Megacity</h3>
+                <h3>{t('selectMegacity')}</h3>
             </div>
             <AnimatePresence>
                 {showCountryNav && (
@@ -36,12 +37,12 @@ const CountryNav = () => {
                     }}
                 >
                     {mega.shuffledMegacities.map((city, index) => {
-                        console.log(city.flag)
                         return (
                             <motion.div
                                 key={index} 
                                 className="country-city"
                                 onClick={() => {
+                                    setMega(state => ({...state, megaIndex: index}))
                                     setShowCountryNav(false)
                                 }}
                                 initial={{
@@ -54,23 +55,13 @@ const CountryNav = () => {
                                     opacity: 0
                                 }}
                             >
-                                <Scroll.Link 
-                                    to={city.slug} 
-                                    smooth={true} 
-                                    offset={-40}
-                                    className="country-nav-link" 
-                                    onClick={() => {
-                                        setShowCountryNav(false)
-                                    }}  
-                                >
-                                    <Image 
-                                        src={`${mega.url}/flags/${city.flag}`} 
-                                        alt={`${city.country} Flag`} 
-                                        width={22}
-                                        height={14}    
-                                    />
-                                    <p>{city.name}</p>
-                                </Scroll.Link>
+                                <Image 
+                                    src={`${mega.url}/flags/${city.flag}`} 
+                                    alt={`${city.country} Flag`} 
+                                    width={22}
+                                    height={14}    
+                                />
+                                <p>{t(`${city.slug}.name`, {ns: 'cities'})}</p>
                             </motion.div>
                         )
                     })}

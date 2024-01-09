@@ -12,6 +12,7 @@ const SwitchLang = ({ lng }) => {
     const [mega] = useContext(MegaContext)
     const { push } = useRouter()
     const pathname = usePathname()
+    console.log("switch: ", lng)
 
     const [menuOpen, setMenuOpen] = useState(false)
 

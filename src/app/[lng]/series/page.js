@@ -8,10 +8,10 @@ export default async function Series({ params: { lng } }) {
     return (
         <main className="series-container" >
             <Logo lng={lng} />
-            <CountryNav  /> 
-            <Nav lng={lng}/>
-            <SwitchLang />
-            <AllCities lng={lng}/>
+            <CountryNav lng={lng} /> 
+            <Nav lng={lng} />
+            <SwitchLang lng={lng} />
+            <AllCities lng={lng} />
         </main>
     )
 }

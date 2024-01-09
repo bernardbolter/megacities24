@@ -29,7 +29,10 @@
         "tianjin" : "Tianjin",
         "guangzhou" : "Guangzhou",
         "shenzhen" : "Shenzhen",
-        "donguan" : "Dongguan",
-        "chonqing" : "Chonqing"
+        "dongguan" : "Dongguan",
+        "chongqing" : "Chonqing"
+    },
+    "skate-city" : {
+        "name" : "Skate City"
     }
 }

@@ -7,6 +7,7 @@
       "year" : "2020",
       "completed" : true,
       "a1print" : true,
+      "lng" : "de",
       "cities" : [
         {
           "name" : "Berlin",
@@ -94,6 +95,7 @@
       "year" : "2020",
       "completed" : true,
       "a1print" : true,
+      "lng" : "en",
       "cities" : [
         {
           "name" : "New York City",
@@ -170,6 +172,7 @@
       "year" : "2020",
       "completed" : true,
       "a1print" : false,
+      "lng" : "cn",
       "cities" : [
         {
           "name" : "上海市",
@@ -244,6 +247,7 @@
           "type" : "skateboarding",
           "completed" : true,
           "a1print" : true,
+          "lng" : "en",
           "spots" : [
             {
               "name" : "3rd and Army",

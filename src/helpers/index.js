@@ -196,3 +196,17 @@ export const decideWallSize = (width, selection) => {
     }
   }
 };
+
+export const decideCityLanguage = (city, lng, megacity, t) => {
+  if (megacity.lng === lng) {
+    return null
+  } else {
+    var otherLangCity = t(`${megacity.slug}.${city.slug}`, { lng: megacity.lng, ns: 'cities' })
+    var currentlangCity = t(`${megacity.slug}.${city.slug}`, { ns: 'cities'})
+    if (otherLangCity === currentlangCity) {
+      return null
+    } else {
+      return otherLangCity
+    }
+  }
+}

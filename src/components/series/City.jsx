@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useWindowSize } from '@/helpers/useWindowSize'
 import { getPopulation } from '@/helpers'
-import * as Scroll from 'react-scroll'
+import { decideCityLanguage } from '@/helpers'
 
 import { useTranslation } from '@/app/i18n/client'
 
@@ -22,7 +22,6 @@ const City = ({
     const size = useWindowSize()
     const router = useRouter()
     const { t } = useTranslation(lng, ['common','about', 'cities'])
-    console.log("city: ", t('deutsche-stadt.munich', {ns: 'cities'}))
 
     useEffect(() => {
         setPopulation(getPopulation(megacity.cities))
@@ -33,10 +32,9 @@ const City = ({
             className="city-container"
             style={{ 
                 curser: megacity.completed ? "pointer" : "default",
-                flexDirection: size.width < 768 ? 'column' : even ? 'row' : 'row-reverse'
+                flexDirection: size.width < 769 ? 'column' : 'row'
             }}
         >
-            <Scroll.Element name={megacity.slug} />
             {size.width < 769 && (
                 <div className="city-header">
                     <div className="city-flag">
@@ -47,7 +45,7 @@ const City = ({
                             height={14}
                         />
                     </div>
-                    <h1>{megacity.name}</h1>
+                    <h1>{t(`${megacity.slug}.name`, {ns: 'cities'})}</h1>
                 </div>
             )}
             
@@ -61,6 +59,22 @@ const City = ({
                     router.push(`/${megacity.slug}`)
                 }}
             >
+                {overlayCity.length !== 0 && (
+                    <>
+                        <Image
+                            src={`${mega.url}${megacity.slug}/${overlayCity}/${overlayCity}_lg.gif`}
+                            className="city-image-overlay"
+                            alt={`overlay of ${overlayCity}`}
+                            width={cityWidth}
+                            height={cityHeight}
+                            onClick={() => setOverlayCity('')}
+                        />
+                        <div
+                            className="city-image-overlay-grey"
+                            style={{ width: cityWidth, height: cityHeight }}
+                        />
+                    </>
+                )}
                 <Image
                     src={`${mega.url}${megacity.slug}/${megacity.slug}_lg.jpg`}
                     alt={`${megacity.name} Megacity`}
@@ -83,29 +97,36 @@ const City = ({
                                     height={14}
                                 />
                             </div>
-                            <h1>{megacity.name}</h1>
+                            <h1>{t(`${megacity.slug}.name`, {ns: 'cities'})}</h1>
+                            <p>{t('population')}</p>
                         </div>
                     )}
                     
                     {megacity.cities.map(city => {
                         return (
                             <div className="city-cities" key={city.name}>
-                                <div className="city-title" onClick={() => setOverlayCity(city.slug)}>
-                                    <h3>{city.name}</h3>
-                                    {city.name !== city.englishName ? <h5>{city.englishName}</h5> : null}
+                                <div className="city-title" onClick={() => {
+                                    if (overlayCity === city.slug) {
+                                        setOverlayCity('')
+                                    } else {
+                                        setOverlayCity(city.slug)}
+                                    }
+                                }>
+                                    <h3>{t(`${megacity.slug}.${city.slug}`, { ns: 'cities' })}</h3>
+                                    <h5>{decideCityLanguage(city, lng, megacity, t)}</h5>
                                 </div>
-                                <h4>{city.population}</h4>
+                                <h4>{t('formatedPop', { count: parseFloat(city.population.replace(/,/g, '')) })}</h4>
                             </div>
                         )
                     })}
                     <div className="city-line" />
-                    <p className="city-population">{population}</p>
+                    <p className="city-population">{t('formatedPop', { count: parseFloat(population.replace(/,/g, '')) })}</p>
                 </div>
                 <div className="city-artInfo">
                     <div className="city-artText">
-                        <p className="city-artSize">121cm x 169cm</p>
+                        <p className="city-artSize">121{t('cm')} x 169{t('cm')}</p>
                         <div className="city-artLine" />
-                        <p className="city-artSize">48&quot; x 69&quot;</p>
+                        <p className="city-artSize">48{t('inch')} x 69{t('inch')}</p>
                         <p className="city-artYear">{megacity.year}</p>
                     </div>
                     <div className="city-enlarge">
@@ -121,7 +142,7 @@ const City = ({
                             <path d="M3.49799 3.99799H6.89799V0.597992H0.0979919V7.39599H3.49799V3.99799Z" />
                             <path d="M3.49799 15.582H0.0979919V25.404H3.49799V15.582Z" />
                         </svg>
-                        <p>Enlarge Megacity</p>
+                        <p>{t('enlargeMegacity')}</p>
                     </div>
                 </div>
             </div>
