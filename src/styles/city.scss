@@ -56,7 +56,7 @@
 }
 
 .city-infoContainer {
-    width: 270px;
+    width: 90%;
     margin: 20px 5% 20px auto;
     display: flex;
     flex-direction: column;
@@ -65,13 +65,14 @@
 
     @media screen and (min-width: 768px) {
         margin: 0 20px 0 0;
+        width: 270px;
     }
 }
 
 .city-info {
     width: 100%;
     box-sizing: border-box;
-    padding: 0;
+    padding: 0 0 50px;
 
     @media only screen and (min-width: 769px) {
         padding: 15px;
@@ -98,14 +99,21 @@
             font-size: 14px;
         } 
     }
+}
 
-    p {
-        margin: 0 0 0 auto;
-        padding: 0;
-        color: $light;
-        opacity: .65;
-        font-size: 8px;
-        font-weight: 700;
+.city-info-population {
+    margin: 0 0 0 auto;
+    padding: 0;
+    color: $light;
+    opacity: .45;
+    font-size: 8px;
+    font-weight: 700;
+    width: 100%;
+    text-align: right;
+    letter-spacing: 0.1em;
+
+    @media only screen and (min-width: 768px) {
+
     }
 }
 
@@ -190,6 +198,52 @@
     } 
 }
 
+.city-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.city-ar {
+    position: relative;
+    text-decoration: none;
+
+
+    h3 {
+        text-decoration: none;
+        color: $light;
+        font-weight: 600;
+        font-size: 13px;
+        opacity: .7;
+    }
+
+    svg {
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        fill: $light;
+        left: 80px;
+        top: -9px;
+    }
+
+    p {
+        font-weight: 44;
+        color: $light;
+        font-size: 11px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.city-actions-line {
+    width: 80%;
+    margin: 20px 10%;
+    height: 1px;
+    background: $light;
+    opacity: .5;
+}
+
 .city-enlarge {
     margin: 20px 0 0 0;
     display: flex;
@@ -197,6 +251,7 @@
     justify-content: flex-start;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
 
     svg {
         width: 20px;
@@ -297,6 +352,19 @@
 
     @media only screen and (min-width: $medium) {
         margin: 7px 0;
+    } 
+}
+
+.city-editionText {
+    font-size: 9px;
+    font-weight: 400;
+    opacity: .6;
+    letter-spacing: 0.05em;
+    padding: 0;
+    margin: 7px 0 0 0;
+
+    @media only screen and (min-width: $medium) {
+        font-size: 10px;
     } 
 }
 

@@ -19,5 +19,8 @@
     "formatedPop" : "{{count, number}}",
     "cm" : "厘米",
     "inch" : "英寸",
-    "enlargeMegacity" : "扩大大都市"
+    "enlargeMegacity" : "扩大大都市",
+    "viewInAR" : "在 AR 中查看",
+    "ifYoureInfrontOfAPrint" : "如果您正在打印",
+    "editionOf4" : "4版"
 }

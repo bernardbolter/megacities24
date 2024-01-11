@@ -3,7 +3,7 @@
 .nav-background-dark {
   z-index: 200;
   position: fixed;
-  top: -41px;
+  top: -75px;
   right: -82px;
   width: 130px;
   height: 440px;
@@ -11,7 +11,7 @@
   display: none;
   flex-direction: column;
   justify-content: flex-start;
-  transform: rotate(-18deg);
+  transform: rotate(-30deg);
   padding: 0;
   transition: all .5s ease;
 
@@ -22,28 +22,17 @@
 
 .nav-background-dark-off {
   top: 0;
-  transform: rotate(-45deg) translate(145px, -30px);
+  transform: rotate(-45deg) translate(142px, -30px);
   transition: all .5s ease;
+  z-index: 202;
+  background: rgba(255,255,255,0.05);
 }
-  
-.navigation {
-  width: 100%;
-    height: 80px;
-    background: $medBack;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    z-index: 401;
 
-  @media screen and (min-width: $tablet-break) {
+.navigation {
     z-index: 201;
     position: fixed;
-    top: -90px;
-    right: -75px;
+    top: -124px;
+    right: -104px;
     left: auto;
     width: 140px;
     border-left: 1px solid $lightHex;
@@ -51,21 +40,40 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    transform: rotate(-18deg);
+    transform: rotate(-30deg);
     padding: 95px 0 330px 0;
-    transition: all .5s ease;
+    transition: transform .5s ease;
     opacity: 1;
     align-items: flex-start;
-  }
-  
-  .nav-link {
+}
+
+.navigation-off {
+  transition: transform .5s ease;
+  transform: rotate(-45deg) translate(90px, 0px);
+}
+
+.navigation-mobile {
+  width: 100%;
+  height: 85px;
+  background: $medBack;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  z-index: 401;
+}
+
+.nav-link-mobile {
     border-right: 2px solid $photobox;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 22.5%;
+    width: 25%;
     height: 30px;
-    font-size: 18px;
+    font-size: 15px;
     color: $light;
     font-weight: 400;
     text-decoration: none;
@@ -78,92 +86,84 @@
     &:hover {
       opacity: 1;
       transition: all 0.5s ease-in-out;
-      background: $photoboxRGBA;
+      background: $photobox;
     }
+}
 
-    @media screen and (min-width: $tablet-break) {
-      color: $light;
-      font-weight: 400;
-      font-size: 13px;
-      text-decoration: none;
-      background: transparent;
-      opacity: .7;
-      padding: 4px 0 4px 14px;
-      width: auto;
-      border-right: none;
+.nav-link-mobile-on {
+  background: $photobox;
+  position: relative;
+  top: 6px;
+  opacity: 1;
+  transition: all .3s ease;
 
-      &:hover {
-        text-decoration: underline;
-        opacity: 1;
-      }
-  
-      svg {
-        fill: $light;
-        opacity: .7;
-        width: 35px;
-        height: 35px;
-        padding: 0 0 0 14px;
-      }
-    }
-  }
-
-  .link {
-    opacity: .7;
-    transition: opacity .3s ease;
-  }
-
-  .nav-link-on {
-    background: $photobox;
-    position: relative;
-    top: 6px;
-    height: 42px;
-    opacity: .85;
-    transition: all .3s ease;
-
-      &:hover {
-        opacity: 1;
-        transition: all .3s ease;
-      } 
-  }
-
-  .nav-link-off {
-    @media screen and (min-width: $tablet-break) {
-      opacity: 0;
+    &:hover {
+      opacity: 1;
       transition: all .3s ease;
-    }
-  }
+    } 
+}
 
-  .globe {
-    padding: 10px 0 0 10px;
-    fill: $light;
+.nav-link {
+    color: $light;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    background: transparent;
+    opacity: .7;
+    padding: 4px 0 4px 14px;
+    width: auto;
+    border-right: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     svg {
-      width: 40px;
-      height: 20px;
+      fill: $light;
+      opacity: .7;
+      width: 35px;
+      height: 35px;
+      padding: 0 0 0 14px;
     }
+  }
+  
+
+.link {
+  opacity: .7;
+  transition: opacity .3s ease;
+}
+
+.nav-link-off {
+  @media screen and (min-width: $tablet-break) {
+    opacity: 0;
+    transition: all .3s ease;
+    visibility: none;
   }
 }
 
-.navigation-off {
-  transition: all .5s ease;
-  transform: rotate(-45deg) translate(90px, 0px);
+.globe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: $light;
+  border-right: none;
+
+  svg {
+    width: 40px;
+    height: 20px;
+  }
 }
 
 .nav-cancel {
-  display: none;
   position: fixed;
   z-index: 1001;
-  top: 13px;
-  right: 10px;
+  top: 20px;
+  right: 17px;
   width: 25px;
   height: 25px;
   opacity: .5;
   transition: opacity .5s ease;
   cursor: pointer;
-
-  @media screen and (min-width: $tablet-break) {
-    display: block;
-  }
 
   &:hover {
     opacity: .7;

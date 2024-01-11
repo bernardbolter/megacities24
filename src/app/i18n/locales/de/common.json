@@ -19,5 +19,8 @@
     "formatedPop" : "{{count, number}}",
     "cm" : "cm",
     "inch" : "\"",
-    "enlargeMegacity" : "Megacity vergrößern"
+    "enlargeMegacity" : "Megacity vergrößern",
+    "viewInAR" : "Ansicht in AR",
+    "ifYoureInfrontOfAPrint" : "wenn Sie vor einem Ausdruck stehen",
+    "editionOf4" : "Auflage von 4"
 }

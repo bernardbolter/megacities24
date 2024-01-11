@@ -2,7 +2,7 @@
 
 .logo {
     z-index: 2001;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -11,10 +11,12 @@
     top: 0;
     width: auto;
 
-    @media screen and (max-width: 600px) {
-      justify-content: space-between;
-      width: 100%;
-    }
+    // @media screen and (max-width: 600px) {
+    //   justify-content: space-between;
+    //   width: 96%;
+    //   margin: 0 2%;
+    //   left: 0;
+    // }
 
     .logo-title {
       display: flex;

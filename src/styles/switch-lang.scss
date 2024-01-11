@@ -28,10 +28,6 @@
     top: 40px;
     display: flex;
     flex-direction: column;
-
-    @media screen and (max-width: 600px) {
-        top: 50px;
-    }
 }
 
 .switch-menu-item {
@@ -45,17 +41,8 @@
     background: rgba(255,255,255,.2);
     border-radius: 5px;
 
-    @media screen and (max-width: 600px) {
-        width: 39px;
-        height: 37px;
-    }
-
     img {
         width: 23px;
-
-        @media screen and (max-width: 600px) {
-            width: 30px;
-        }
     }
 }
 
@@ -64,11 +51,6 @@
     height: 30px;
     opacity: .6;
     transition: opacity .5s ease;
-
-    @media screen and (max-width: 600px) {
-        width: 40px;
-        height: 40px;
-    }
 
     &:hover {
         opacity: .8;

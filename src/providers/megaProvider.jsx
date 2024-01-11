@@ -20,6 +20,7 @@ const MegaProvider = ({ children }) => {
     cityWidth: 0,
     cityHeight: 0,
     megaIndex: 0,
+    navOpen: true,
 
     zoom: 'normal',
     zooming: false,

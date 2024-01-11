@@ -94,7 +94,7 @@ const AllCities = ({ lng }) => {
 
     return (
         <>
-            {showHoroScroll && (
+            {showHoroScroll && size.width > 768 && (
                 <div 
                     className="horoscroll-container"
                     onClick={() => setMega(state => ({ ...state, megaIndex: state.megaIndex - 1 }))}
@@ -110,7 +110,7 @@ const AllCities = ({ lng }) => {
             {cityWidth !== 0 && megaWidth !== 0 ? (
                 <div
                     className="series-megacities" 
-                    style={{ height: cityHeight }}
+                    style={{ height: size.width > 768 ? cityHeight : 'auto' }}
                     ref={megaRef}
                     onWheel={(e) => showScrollNavigation(e.deltaY)}
                 >
@@ -138,7 +138,7 @@ const AllCities = ({ lng }) => {
             ) : (
                 <Loader />
             )}
-            {showScrollRight && (
+            {showScrollRight && size.width > 768 && (
                 <div 
                     className="megaseries-scrollright-container"
                     onClick={() => setMega(state => ({ ...state, megaIndex: state.megaIndex + 1 }))}    
